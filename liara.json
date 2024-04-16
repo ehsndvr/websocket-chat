@@ -1,0 +1,15 @@
+{
+    "platform": "laravel",
+    "app": "laravel-starter",
+    "laravel": {
+        "phpVersion": "8.2",
+        "configCache": true,
+        "routeCache": true
+    },
+    "disks": [
+        {
+            "name": "laravel",
+            "mountTo": "uploads"
+        }
+    ]
+}

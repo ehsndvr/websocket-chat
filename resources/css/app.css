@@ -1,0 +1,460 @@
+/* css root element */
+
+:root {
+    --first-color: #131313;
+    --second-color: #20232a;
+    --third-color: #2f333e;
+    --font-border-color: #f6f6f6;
+}
+
+
+/* css reset element */
+
+* {
+    text-decoration: none;
+    outline: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto', sans-serif;
+    overflow: hidden;
+}
+
+
+/* css fonts element */
+
+@font-face {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: bold;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-r';
+    font-style: normal;
+    font-weight: 100;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-m';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-t';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Roboto-Thin.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-c';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/Roboto-Condensed.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-b';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../fonts/Roboto-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-bb';
+    font-style: normal;
+    font-weight: 900;
+    src: url('../fonts/Roboto-Black.ttf');
+}
+
+@font-face {
+    font-family: 'roboto-bc';
+    font-style: normal;
+    font-weight: 950;
+    src: url('../fonts/Roboto-BoldCondensed.ttf');
+}
+
+
+/* css element style */
+
+.main {
+    display: flex;
+    background-color: var(--first-color);
+}
+
+.active {
+    background-color: var(--third-color);
+    border-radius: 20px;
+}
+
+.active-f {
+    color: var(--second-color);
+}
+
+
+/* profile style element */
+
+.main-profile {
+    width: 5%;
+    height: 100vh;
+    background-color: var(--first-color);
+    color: var(--font-border-color);
+}
+
+.main-profile__logo {
+    font-family: 'roboto-b';
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 2em;
+}
+
+.profile-setting__menu {
+    padding: 0;
+    margin: 0 1rem;
+    border-bottom: 1px solid var(--font-border-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.setting-menu {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.setting-menu p {
+    margin-top: .5rem;
+    margin-bottom: 0;
+    font-family: 'roboto-c';
+    font-size: .6em;
+}
+
+
+/* massage box style element */
+
+.main-massage__box {
+    width: 30%;
+    height: 100vh;
+    background-color: var(--second-color);
+    border-radius: 25px 0 0 0;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+    direction: ltr;
+}
+
+.main-massage__box::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--third-color);
+    border-radius: 20px;
+}
+
+.main-massage__box::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.main-massage__box::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    border-radius: 10px;
+}
+
+.massage-box__search {
+    background-color: var(--third-color);
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 15px;
+    font-family: 'roboto-m';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 35px;
+}
+
+.search-box {
+    background-color: transparent;
+    border: none;
+    color: var(--font-border-color);
+    margin-left: 1rem;
+    width: 100%;
+}
+
+.search-box::placeholder {
+    color: var(--font-border-color);
+    font-size: .9em;
+}
+
+.massage-person__massage {
+    margin: 0 2rem;
+    color: var(--font-border-color);
+    font-family: 'roboto-t';
+}
+
+.person-massage {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+}
+
+.person-massage img {
+    border-radius: 15px;
+    margin-right: 1rem
+}
+
+.massage-index__box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.massage-index {
+    margin-right: 2rem;
+}
+
+.massage-alert {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.massage-notification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.massage-notification p {
+    margin: 0;
+    align-self: flex-start;
+    background-color: var(--first-color);
+    padding: .25rem .5rem;
+    border-radius: 50%;
+    font-size: .7em;
+    font-family: "roboto-b";
+}
+
+.bbt {
+    border-bottom: none;
+}
+
+.massage-index__title {
+    margin: 0;
+    font-family: 'roboto-bb';
+    font-size: 1em;
+}
+
+.massage-index__text {
+    margin: 0;
+}
+
+.massage-time {
+    margin-top: .5rem;
+    align-self: flex-end;
+    font-size: .7em;
+}
+
+
+/* massage style element */
+
+.main-massage {
+    width: 65%;
+    height: 100vh;
+    background-color: var(--second-color);
+    color: var(--font-border-color);
+}
+
+.main-massage {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-left: 2px solid var(--third-color);
+}
+
+.main-massage__header {
+    padding: .7rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--third-color);
+}
+
+.massage-header__short-hand svg {
+    margin-left: 1rem;
+    cursor: pointer;
+    transition: ease .5s;
+}
+
+.massage-header__short-hand svg:hover {
+    fill: var(--second-color);
+}
+
+.user-name {
+    margin: 0;
+    font-family: 'roboto-bb';
+    font-size: 1.5em;
+    margin-bottom: .5rem;
+}
+
+.user-last__seen {
+    margin: 0;
+    font-size: .8em;
+}
+
+.send-massage {
+    width: 100%;
+    display: flex;
+    padding: .5rem 1rem;
+    align-items: center;
+    background-color: var(--third-color);
+}
+
+.send-massage input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: .7rem;
+    margin-right: .5rem;
+    color: var(--font-border-color);
+    font-size: 1rem;
+}
+
+.send-massage svg {
+    cursor: pointer;
+    transition: ease .5s;
+}
+
+.send-massage svg:hover {
+    fill: var(--second-color);
+}
+
+.send {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: .5rem;
+    cursor: pointer;
+}
+
+.massage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: .5rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+.massage::-webkit-scrollbar {
+    width: 5px;
+    background-color: var(--third-color);
+    border-radius: 20px;
+}
+
+.massage::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.massage::-webkit-scrollbar-thumb {
+    background: var(--first-color);
+    border-radius: 10px;
+}
+
+.massage-holder {
+    display: flex;
+}
+
+.massage-sent {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    align-self: flex-start;
+}
+
+.massage-sent img,
+.massage-receive img {
+    border-radius: 20px;
+    margin-right: .5rem;
+}
+
+.massage-receive img {
+    margin-left: .5rem;
+}
+
+.massage-sent__box,
+.massage-receive__box {
+    background-color: var(--third-color);
+    width: 50%;
+    padding: .5rem 1rem;
+    border-radius: 20px 20px 20px 0;
+    margin-bottom: .5rem;
+}
+
+.massage-receive__box {
+    border-radius: 20px 20px 0 20px;
+}
+
+.massage-sent__id,
+.massage-receive__id {
+    margin: .5rem 0;
+    font-family: "roboto-b";
+    font-size: 1.2em;
+    color: var(--first-color);
+}
+
+.massage-sent__holder,
+.massage-receive__holder {
+    display: flex;
+}
+
+.massage-sent__box span,
+.massage-receive__box span {
+    font-size: .9em;
+}
+
+.massage-sent__info,
+.massage-receive__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    margin: .5rem;
+    font-size: .7em;
+}
+
+.massage-receive {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+
+
+/* project responsive element */
+
+@media only screen and (max-width: 1200px) {}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 768px) {}
+
+@media only screen and (max-width: 576px) {}
