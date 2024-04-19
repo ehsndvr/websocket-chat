@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Chat;
 
+use App\Events\ChatMessageSent;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -27,36 +28,15 @@ class ChatController extends Controller
         );
     }
 
-    public function login(Request $request)
-    {
-        $request->validate([
-            'username' => 'required|string|max:15|regex:/^[a-zA-Z]+$/',
-        ]);
-
-        $username = $request->input('username');
-
-        $user = User::firstOrCreate(['name' => $username], ['name' => $username]);
-
-        Auth::login($user);
-
-        session(['username' => $username]);
-
-        return redirect()->route('chat');
-    }
     public function sendMessage(Request $request)
     {
-        if (!Auth::check()) {
-            return response()->json(['status' => 'Error', 'message' => 'User is not authenticated.']);
-        }
 
-        $data = [
-            'message' => $request->input('message'),
-            'user' => Auth::user()->name
-        ];
+        $message = $request->input('message');
 
-        $this->pusher->trigger('chat-channel', 'chat-event', $data);
+        // $this->pusher->trigger('chat', 'message', $message);
+        broadcast(new ChatMessageSent($message))->toOthers();
 
-        return response()->json(['status' => 'Message sent!']);
+        return response()->json(['success' => true]);
 
     }
 }

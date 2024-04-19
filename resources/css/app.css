@@ -7,7 +7,6 @@
     --font-border-color: #f6f6f6;
 }
 
-
 /* css reset element */
 
 * {
@@ -20,69 +19,67 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'roboto', sans-serif;
+    font-family: "roboto", sans-serif;
     overflow: hidden;
 }
-
 
 /* css fonts element */
 
 @font-face {
-    font-family: 'roboto';
+    font-family: "roboto";
     font-style: normal;
     font-weight: bold;
-    src: url('../fonts/Roboto-Light.ttf');
+    src: url("../fonts/Roboto-Light.ttf");
 }
 
 @font-face {
-    font-family: 'roboto-r';
+    font-family: "roboto-r";
     font-style: normal;
     font-weight: 100;
-    src: url('../fonts/Roboto-Regular.ttf');
+    src: url("../fonts/Roboto-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'roboto-m';
+    font-family: "roboto-m";
     font-style: normal;
     font-weight: 300;
-    src: url('../fonts/Roboto-Medium.ttf');
+    src: url("../fonts/Roboto-Medium.ttf");
 }
 
 @font-face {
-    font-family: 'roboto-t';
+    font-family: "roboto-t";
     font-style: normal;
     font-weight: normal;
-    src: url('../fonts/Roboto-Thin.ttf');
+    src: url("../fonts/Roboto-Thin.ttf");
 }
 
 @font-face {
-    font-family: 'roboto-c';
+    font-family: "roboto-c";
     font-style: normal;
     font-weight: 500;
-    src: url('../fonts/Roboto-Condensed.ttf');
+    src: url("../fonts/Roboto-Condensed.ttf");
 }
 
 @font-face {
-    font-family: 'roboto-b';
+    font-family: "roboto-b";
     font-style: normal;
     font-weight: 800;
-    src: url('../fonts/Roboto-Bold.ttf');
+    src: url("../fonts/Roboto-Bold.ttf");
 }
 
 @font-face {
-    font-family: 'roboto-bb';
+    font-family: "roboto-bb";
     font-style: normal;
     font-weight: 900;
-    src: url('../fonts/Roboto-Black.ttf');
+    src: url("../fonts/Roboto-Black.ttf");
 }
 
 @font-face {
-    font-family: 'roboto-bc';
+    font-family: "roboto-bc";
     font-style: normal;
     font-weight: 950;
-    src: url('../fonts/Roboto-BoldCondensed.ttf');
+    src: url("../fonts/Roboto-BoldCondensed.ttf");
 }
-
 
 /* css element style */
 
@@ -100,7 +97,6 @@ body {
     color: var(--second-color);
 }
 
-
 /* profile style element */
 
 .main-profile {
@@ -111,7 +107,7 @@ body {
 }
 
 .main-profile__logo {
-    font-family: 'roboto-b';
+    font-family: "roboto-b";
     text-align: center;
     margin: 1rem 0;
     font-size: 2em;
@@ -137,12 +133,11 @@ body {
 }
 
 .setting-menu p {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     margin-bottom: 0;
-    font-family: 'roboto-c';
-    font-size: .6em;
+    font-family: "roboto-c";
+    font-size: 0.6em;
 }
-
 
 /* massage box style element */
 
@@ -177,7 +172,7 @@ body {
     margin: 2rem;
     padding: 1rem;
     border-radius: 15px;
-    font-family: 'roboto-m';
+    font-family: "roboto-m";
     display: flex;
     justify-content: center;
     align-items: center;
@@ -195,13 +190,24 @@ body {
 
 .search-box::placeholder {
     color: var(--font-border-color);
-    font-size: .9em;
+    font-size: 0.9em;
 }
 
 .massage-person__massage {
     margin: 0 2rem;
     color: var(--font-border-color);
-    font-family: 'roboto-t';
+    font-family: "roboto-t";
+}
+
+.massage__add-users {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.massage__add-users span {
+    cursor: pointer;
 }
 
 .person-massage {
@@ -214,7 +220,7 @@ body {
 
 .person-massage img {
     border-radius: 15px;
-    margin-right: 1rem
+    margin-right: 1rem;
 }
 
 .massage-index__box {
@@ -224,6 +230,7 @@ body {
 }
 
 .massage-index {
+    width: 65%;
     margin-right: 2rem;
 }
 
@@ -243,9 +250,9 @@ body {
     margin: 0;
     align-self: flex-start;
     background-color: var(--first-color);
-    padding: .25rem .5rem;
+    padding: 0.25rem 0.5rem;
     border-radius: 50%;
-    font-size: .7em;
+    font-size: 0.7em;
     font-family: "roboto-b";
 }
 
@@ -255,20 +262,20 @@ body {
 
 .massage-index__title {
     margin: 0;
-    font-family: 'roboto-bb';
+    font-family: "roboto-bb";
     font-size: 1em;
 }
 
 .massage-index__text {
     margin: 0;
+    font-size: 0.8em;
 }
 
 .massage-time {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
     align-self: flex-end;
-    font-size: .7em;
+    font-size: 0.7em;
 }
-
 
 /* massage style element */
 
@@ -277,49 +284,61 @@ body {
     height: 100vh;
     background-color: var(--second-color);
     color: var(--font-border-color);
-}
-
-.main-massage {
+    border-left: 2px solid var(--third-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border-left: 2px solid var(--third-color);
 }
 
 .main-massage__header {
-    padding: .7rem 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0.7rem 1rem;
     background-color: var(--third-color);
+}
+
+.massage-header__info {
+    display: flex;
+    align-items: center;
+}
+
+.massage-header__back {
+    margin-right: 1rem;
+    border: 1px solid #f6f6f6;
+    padding: 0.2rem 0.5rem;
+    border-radius: 15px;
+    line-height: 0;
+    cursor: pointer;
+    display: none;
 }
 
 .massage-header__short-hand svg {
     margin-left: 1rem;
     cursor: pointer;
-    transition: ease .5s;
+    transition: ease 0.5s;
 }
 
 .massage-header__short-hand svg:hover {
-    fill: var(--second-color);
+    fill: var(--font-border-color);
 }
 
 .user-name {
     margin: 0;
-    font-family: 'roboto-bb';
+    font-family: "roboto-bb";
     font-size: 1.5em;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .user-last__seen {
     margin: 0;
-    font-size: .8em;
+    font-size: 0.8em;
 }
 
 .send-massage {
     width: 100%;
     display: flex;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     align-items: center;
     background-color: var(--third-color);
 }
@@ -328,19 +347,19 @@ body {
     width: 100%;
     background-color: transparent;
     border: none;
-    padding: .7rem;
-    margin-right: .5rem;
+    padding: 0.7rem;
+    margin-right: 0.5rem;
     color: var(--font-border-color);
     font-size: 1rem;
 }
 
 .send-massage svg {
     cursor: pointer;
-    transition: ease .5s;
+    transition: ease 0.5s;
 }
 
 .send-massage svg:hover {
-    fill: var(--second-color);
+    fill: var(--font-border-color);
 }
 
 .send {
@@ -350,7 +369,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: .5rem;
+    margin-left: 0.5rem;
     cursor: pointer;
 }
 
@@ -358,7 +377,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    margin: .5rem;
+    margin: 0.5rem;
     overflow-y: scroll;
     scroll-behavior: smooth;
     overflow-y: auto;
@@ -393,20 +412,20 @@ body {
 .massage-sent img,
 .massage-receive img {
     border-radius: 20px;
-    margin-right: .5rem;
+    margin-right: 0.5rem;
 }
 
 .massage-receive img {
-    margin-left: .5rem;
+    margin-left: 0.5rem;
 }
 
 .massage-sent__box,
 .massage-receive__box {
     background-color: var(--third-color);
     width: 50%;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 20px 20px 20px 0;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .massage-receive__box {
@@ -415,10 +434,10 @@ body {
 
 .massage-sent__id,
 .massage-receive__id {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     font-family: "roboto-b";
     font-size: 1.2em;
-    color: var(--first-color);
+    color: #fff;
 }
 
 .massage-sent__holder,
@@ -428,7 +447,7 @@ body {
 
 .massage-sent__box span,
 .massage-receive__box span {
-    font-size: .9em;
+    font-size: 0.9em;
 }
 
 .massage-sent__info,
@@ -437,8 +456,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-    margin: .5rem;
-    font-size: .7em;
+    margin: 0.5rem;
+    font-size: 0.7em;
 }
 
 .massage-receive {
@@ -448,13 +467,73 @@ body {
     justify-content: flex-start;
 }
 
-
 /* project responsive element */
 
-@media only screen and (max-width: 1200px) {}
+@media only screen and (max-width: 1200px) {
+}
 
-@media only screen and (max-width: 992px) {}
+@media only screen and (max-width: 992px) {
+}
 
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+    .main-profile {
+        width: 10vw;
+    }
+    .main-massage__box {
+        width: 40vw;
+    }
+    .massage-box__search {
+        margin: 2rem 0.5rem;
+    }
+    .massage-person__massage {
+        margin: 0 0.5rem;
+    }
+    .massage-notification {
+        justify-content: center;
+        margin-right: 0.2rem;
+    }
+    .massage-alert {
+        justify-content: center;
+    }
+    .massage-index {
+        margin-right: 1rem;
+    }
+    .massage-sent__box,
+    .massage-receive__box {
+        width: 70%;
+    }
+}
 
-@media only screen and (max-width: 576px) {}
+@media only screen and (max-width: 576px) {
+    .main-massage {
+        display: none;
+    }
+    .main-profile {
+        width: 20vw;
+    }
+    .main-massage__box {
+        width: 80vw;
+    }
+    .massage-box__search {
+        margin: 2rem 0.5rem;
+    }
+    .massage-person__massage {
+        margin: 0 0.5rem;
+    }
+    .logo {
+        margin: 1rem 0;
+    }
+    .massage-notification {
+        justify-content: center;
+        margin-right: 0.2rem;
+    }
+    .massage-alert {
+        justify-content: center;
+    }
+    .massage-index {
+        margin-right: 1rem;
+    }
+    .massage-header__back {
+        display: inline-block;
+    }
+}

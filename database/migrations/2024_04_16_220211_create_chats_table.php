@@ -13,7 +13,6 @@ return new class extends Migration {
         Schema::create('chats', function (Blueprint $table) {
             $table->id();
             $table->foreignId('group_id')->nullable()->index()->references('id')->on('groups')->onDelete('cascade');
-            $table->foreignId('user_id')->nullable()->index()->references('id')->on('users')->onDelete('cascade');
             $table->text('message');
             $table->timestamps();
         });

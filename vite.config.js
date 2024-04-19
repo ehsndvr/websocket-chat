@@ -8,7 +8,6 @@ export default defineConfig({
                 "resources/css/app.css",
                 "resources/js/tailwindcss.js",
                 "resources/js/app.js",
-                "resources/js/validation.js"
             ],
             refresh: true,
         }),
