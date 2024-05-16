@@ -303,16 +303,6 @@ body {
     align-items: center;
 }
 
-.massage-header__back {
-    margin-right: 1rem;
-    border: 1px solid #f6f6f6;
-    padding: 0.2rem 0.5rem;
-    border-radius: 15px;
-    line-height: 0;
-    cursor: pointer;
-    display: none;
-}
-
 .massage-header__short-hand svg {
     margin-left: 1rem;
     cursor: pointer;
@@ -506,13 +496,17 @@ body {
 
 @media only screen and (max-width: 576px) {
     .main-massage {
-        display: none;
+        width: 80%;
+    }
+    .massage-header__short-hand {
+        display: flex;
     }
     .main-profile {
-        width: 20vw;
+        width: 0vw;
     }
     .main-massage__box {
-        width: 80vw;
+        width: 20vw;
+        border-radius: 0;
     }
     .massage-box__search {
         margin: 2rem 0.5rem;
@@ -533,7 +527,7 @@ body {
     .massage-index {
         margin-right: 1rem;
     }
-    .massage-header__back {
-        display: inline-block;
+    .massage-box__search {
+        visibility: hidden;
     }
 }
