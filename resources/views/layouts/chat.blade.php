@@ -1,6 +1,6 @@
 <div class="massage-holder">
     <div class="massage-sent">
-        <img src="{{ Vite::asset('resources/images/profile.jpg') }}" alt="profile" width="50" height="50">
+        {{-- <img src="{{ Vite::asset('resources/images/profile.jpg') }}" alt="profile" width="50" height="50"> --}}
 
         <div class="massage-sent__box">
             <p class="massage-sent__id">Fardin</p>

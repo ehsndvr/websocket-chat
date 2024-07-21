@@ -14,6 +14,7 @@
     },
     "dependencies": {
         "evergreen-ui": "^7.1.9",
+        "sweetalert2": "^11.11.0",
         "zod": "^3.22.4"
     }
 }

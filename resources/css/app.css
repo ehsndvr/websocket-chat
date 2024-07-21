@@ -412,7 +412,7 @@ body {
 .massage-sent__box,
 .massage-receive__box {
     background-color: var(--third-color);
-    width: 50%;
+    width: 100%;
     padding: 0.5rem 1rem;
     border-radius: 20px 20px 20px 0;
     margin-bottom: 0.5rem;
@@ -433,6 +433,7 @@ body {
 .massage-sent__holder,
 .massage-receive__holder {
     display: flex;
+    justify-content: space-between;
 }
 
 .massage-sent__box span,

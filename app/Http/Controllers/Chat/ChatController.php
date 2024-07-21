@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Chat;
 
 use App\Events\ChatMessageSent;
+use App\Events\GroupSent;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -33,10 +34,18 @@ class ChatController extends Controller
 
         $message = $request->input('message');
 
-        // $this->pusher->trigger('chat', 'message', $message);
         broadcast(new ChatMessageSent($message))->toOthers();
 
         return response()->json(['success' => true]);
 
+    }
+
+    public function createGroup(Request $request)
+    {
+        $groupName = $request->input('group_name');
+
+        broadcast(new GroupSent($groupName))->toOthers();
+
+        return response()->json(['success' => true]);
     }
 }
