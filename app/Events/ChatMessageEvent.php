@@ -11,17 +11,21 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcastNow;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
 
-class GroupSent implements ShouldBroadcastNow
+class ChatMessageEvent implements ShouldBroadcastNow
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
-    public $groupName;
 
+    public $groupId;
+    public $message;
+    public $senderId;
     /**
      * Create a new event instance.
      */
-    public function __construct($groupName)
+    public function __construct($groupId, $message, $senderId)
     {
-        $this->groupName = $groupName;
+        $this->groupId = $groupId;
+        $this->message = $message;
+        $this->senderId = $senderId;
     }
 
     /**
@@ -31,13 +35,11 @@ class GroupSent implements ShouldBroadcastNow
      */
     public function broadcastOn(): array
     {
-        return [
-            new Channel('group'),
-        ];
+        return [new Channel('chat.' . $this->groupId)];
     }
 
     public function broadcastAs(): string
     {
-        return 'groups';
+        return 'NewMessage';
     }
 }
